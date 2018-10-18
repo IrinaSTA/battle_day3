@@ -13,4 +13,9 @@ describe Player do
     expect(irina.score).to eq 60
   end
 
+  it 'receives damage' do
+    irina.receive_damage(10)
+    expect(irina.score).to eq(50)
+  end
+
 end

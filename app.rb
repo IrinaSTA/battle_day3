@@ -1,5 +1,6 @@
 require 'sinatra/base'
 require_relative './lib/player'
+require_relative './lib/game'
 
 class Battle < Sinatra::Base
 
@@ -36,5 +37,5 @@ enable :sessions
   end
 
 
-  run! if app_file == $0
+  # run! if app_file == $0 # only need this to run ruby app.rb; instead run with rackup config.ru
 end

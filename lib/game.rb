@@ -5,8 +5,12 @@ class Game
     @player2 = player2
   end
 
+  def damage_points
+    @damage = 10
+  end
+
   def attack(player)
-    player.score -= 10
+    player.receive_damage(damage_points)
   end
 
 end
