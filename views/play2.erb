@@ -1,6 +1,7 @@
 
-<%= @player_1 %> vs <%= @player_2 %>
-<div> <%= @player_2 %>: <%= @score %> </div>
+<%= @game.player1.name %> vs <%= @game.player2.name %>
+<div>  <%= @game.current_turn.name %>: <%= @game.current_turn.score %> </div>
+<div>  <%= @game.current_turn.name %>'s turn  </div>
 <div> You attacked your opponent! </div>
 <form action='/attack_response' method="post">
   <button>Attack</button>

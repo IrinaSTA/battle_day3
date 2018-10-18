@@ -7,6 +7,6 @@ feature 'attack' do
 
   scenario 'Reduces opponents score by 10' do
     sign_in_and_play
-    expect { click_button('Attack') }.to change{ $player2.score }.by(-10)
+    expect { click_button('Attack') }.to change{ $game.player2.score }.by(-10)
   end
 end
