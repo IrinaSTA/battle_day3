@@ -23,14 +23,24 @@ enable :sessions
   end
 
   post '/attack_response' do
-    $game.attack($game.player2)
-    $game.switch_turns
-    redirect to('/play2')
+    $game.attack($game.passive_player)
+    if $game.passive_player.score == 0
+      redirect to('/game_over')
+    else
+      $game.switch_turns
+      redirect to('/play2')
+    end
+    # $game.switch_turns
+    # redirect to('/play2')
   end
 
   get '/play2' do
     @game = $game
     erb :play2
+  end
+
+  get '/game_over' do
+    erb :game_over
   end
 
   # run! if app_file == $0 # only need this to run ruby app.rb; instead run with rackup config.ru

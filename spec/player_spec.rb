@@ -2,20 +2,20 @@ require 'player'
 
 describe Player do
 
-  subject(:imogen) {Player.new("Imogen")}
-  subject(:irina) {Player.new("Irina")}
+  subject(:jack) {Player.new("Jack")}
+  subject(:jill) {Player.new("Jill")}
 
   it 'has a name' do
-    expect(irina.name).to eq("Irina")
+    expect(jack.name).to eq("Jack")
   end
 
   it 'returns score' do
-    expect(irina.score).to eq 60
+    expect(jack.score).to eq 60
   end
 
   it 'receives damage' do
-    irina.receive_damage
-    expect(irina.score).to eq(50)
+    jack.receive_damage
+    expect(jack.score).to eq(50)
   end
 
 end

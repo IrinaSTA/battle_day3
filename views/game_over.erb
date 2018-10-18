@@ -5,7 +5,7 @@
 
 <div> <%= @game.player2.name %>'s points: <%= @game.player2.score %> </div>
 
-<div>  <%= @game.active_player.name %>'s turn to attack! </div>
+<div>  <%= @game.passive_player.name %> lost! Game over. </div>
 
 <form action='/attack_response' method="post">
   <button>Attack</button>
